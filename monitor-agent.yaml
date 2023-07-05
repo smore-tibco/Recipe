@@ -9,7 +9,8 @@ recipe:
       namespace: ${NAMESPACE}
       repository:
         git:
-          host: https://github.com/smore-tibco/Recipe
+          host: https://github.com/syan-tibco/tp-helm-charts
+          path: /charts/tp-dp-monitor-agent
           branch: main
       values:
         - content: |
