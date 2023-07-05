@@ -1,0 +1,26 @@
+capabilityId: MONITORINGAGENT
+version: 
+  - 1
+  - 0
+  - 0
+recipe:
+  helmCharts:
+    - name: tp-dp-monitor-agent
+      namespace: ${NAMESPACE}
+      repository:
+        git:
+          host: https://github.com/smore-tibco/Recipe
+          branch: main
+      values:
+        - content: |
+            global:
+              dockerRegistry: reldocker.tibco.com
+              tibco:
+                dataPlaneId: "${DP_ID}"
+                subscriptionId: "${SUB_ID}"
+      flags:
+        install: true
+        createNamespace: false
+isDevTesting: true
+status: deployed
+region: vagrant
