@@ -16,9 +16,6 @@ recipe:
         - content: |
             global:
               dockerRegistry: reldocker.tibco.com
-              tibco:
-                dataPlaneId: "${DP_ID}"
-                subscriptionId: "${SUB_ID}"
       flags:
         install: true
         createNamespace: false
