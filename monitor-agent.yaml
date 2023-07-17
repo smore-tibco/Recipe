@@ -19,6 +19,5 @@ recipe:
       flags:
         install: true
         createNamespace: false
-isDevTesting: true
 status: deployed
 region: vagrant
