@@ -19,5 +19,6 @@ recipe:
       flags:
         install: true
         createNamespace: false
+eula: true
 status: deployed
 region: vagrant
