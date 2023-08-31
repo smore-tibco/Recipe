@@ -19,6 +19,7 @@ recipe:
       flags:
         install: true
         createNamespace: false
+enableIngress: true
 eula: true
 status: deployed
 region: vagrant
