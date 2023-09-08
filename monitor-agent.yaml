@@ -8,17 +8,17 @@ recipe:
     - name: tp-dp-monitor-agent
       namespace: ${NAMESPACE}
       repository:
-        git:
-          host: https://github.com/syan-tibco/tp-helm-charts
-          path: /charts/tp-dp-monitor-agent
-          branch: main
+        chartMuseum:
+          host: https://syan-tibco.github.io/tp-helm-charts/
       values:
         - content: |
             global:
-              dockerRegistry: reldocker.tibco.com
+              cp:
+                containerRegistry:
+                  url: reldocker.tibco.com
       flags:
         install: true
         createNamespace: false
-eula: true
 status: deployed
 region: vagrant
+eula: true
